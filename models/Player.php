@@ -32,21 +32,36 @@ class Player {
         $this->conn = $database->getConnection();
     }
     
+    /**
+     * Calculate player score based on weighted values
+     * 
+     * Philosophy:
+     * - MVP: Most prestigious individual award (15 pts)
+     * - FMVP: Best player on championship team (12 pts)
+     * - Rings: Team accomplishment, slightly reduced (8 pts)
+     * - DPOY: Great but less than MVP (6 pts)
+     * - All-NBA: Top 15 players each season (3 pts)
+     * - All-Defense: Best defenders (2 pts)
+     * - ROTY: Immediate impact (3 pts)
+     * - Scoring Title: Elite scoring (4 pts)
+     * - Other stat titles: Position-specific (2 pts)
+     * - MIP/6MOY: Nice but not elite (1 pt)
+     */
     private function calculatePlayerScore($player) {
-        return ($player['rings'] * 10) +
-               ($player['mvp'] * 15) +
-               ($player['fmvp'] * 12) +
-               ($player['all_nba'] * 2) +
-               ($player['all_def'] * 1.5) +
-               ($player['dpoy'] * 8) +
-               ($player['roty'] * 3) +
-               ($player['mip'] * 2) +
-               ($player['sixth_man'] * 2) +
-               ($player['ppg_lc'] * 3) +
-               ($player['rpg_lc'] * 2) +
-               ($player['apg_lc'] * 2) +
-               ($player['spg_lc'] * 2) +
-               ($player['bpg_lc'] * 2);
+        return ($player['rings'] * 8) +           // Rings - team accomplishment
+               ($player['mvp'] * 15) +             // MVP - Most prestigious
+               ($player['fmvp'] * 12) +            // FMVP - Best on championship team
+               ($player['dpoy'] * 6) +             // DPOY - Great but less than MVP
+               ($player['all_nba'] * 3) +          // All-NBA - Top 15 player
+               ($player['all_def'] * 2) +          // All-Defense - Elite defender
+               ($player['roty'] * 3) +             // ROTY - Immediate stardom
+               ($player['mip'] * 1) +              // MIP - Nice but not elite
+               ($player['sixth_man'] * 1) +        // 6MOY - Valuable role player
+               ($player['ppg_lc'] * 4) +           // Scoring Title - Elite scorer
+               ($player['rpg_lc'] * 2) +           // Rebound Title - Big man elite
+               ($player['apg_lc'] * 2) +           // Assist Title - Playmaker elite
+               ($player['spg_lc'] * 2) +           // Steals Title - Defensive elite
+               ($player['bpg_lc'] * 2);            // Blocks Title - Rim protector
     }
     
     /**

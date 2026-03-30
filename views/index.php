@@ -714,21 +714,21 @@ $hmPlayers = $hmData['hm_players'];
 </div>
 
         <!-- Scoring System - MOVED TO TOP -->
-        <div class="scoring-system">
-            <h4>📊 Scoring System</h4>
-            <div class="scoring-grid">
-                <div class="scoring-item"><span>👑 MVP</span><span>15 pts</span></div>
-                <div class="scoring-item"><span>⭐ FMVP</span><span>12 pts</span></div>
-                <div class="scoring-item"><span>🏆 Ring</span><span>10 pts</span></div>
-                <div class="scoring-item"><span>🔒 DPOY</span><span>8 pts</span></div>
-                <div class="scoring-item"><span>🏀 Scoring Title (PPG)</span><span>3 pts</span></div>
-                <div class="scoring-item"><span>🌟 All-NBA</span><span>2 pts</span></div>
-                <div class="scoring-item"><span>📊 RPG/APG/SPG/BPG</span><span>2 pts</span></div>
-                <div class="scoring-item"><span>🛡️ All-Def</span><span>1.5 pts</span></div>
-                <div class="scoring-item"><span>👶 ROTY</span><span>3 pts</span></div>
-                <div class="scoring-item"><span>📈 MIP/6MOY</span><span>2 pts</span></div>
-            </div>
-        </div>
+       <div class="scoring-system">
+    <h4>📊 Scoring System</h4>
+    <div class="scoring-grid">
+        <div class="scoring-item"><span>👑 MVP</span><span>15 pts</span></div>
+        <div class="scoring-item"><span>⭐ FMVP</span><span>12 pts</span></div>
+        <div class="scoring-item"><span>🏆 Ring</span><span>8 pts</span></div>
+        <div class="scoring-item"><span>🔒 DPOY</span><span>6 pts</span></div>
+        <div class="scoring-item"><span>🏀 Scoring Title (PPG)</span><span>4 pts</span></div>
+        <div class="scoring-item"><span>🌟 All-NBA</span><span>3 pts</span></div>
+        <div class="scoring-item"><span>👶 ROTY</span><span>3 pts</span></div>
+        <div class="scoring-item"><span>📊 RPG/APG/SPG/BPG</span><span>2 pts</span></div>
+        <div class="scoring-item"><span>🛡️ All-Def</span><span>2 pts</span></div>
+        <div class="scoring-item"><span>📈 MIP/6MOY</span><span>1 pt</span></div>
+    </div>
+</div>
 
         <!-- Search Bar -->
         <div class="search-container">
