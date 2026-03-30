@@ -1,0 +1,20 @@
+# Database config (contains passwords)
+config/database.php
+
+# Session files
+sessions/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+error_log
+
+# XAMPP specific
+xampp/

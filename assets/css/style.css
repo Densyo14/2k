@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #eee;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #ff6b6b;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #ffd93d;
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+h3 {
+    color: #ffd93d;
+    margin-top: 20px;
+}
+
+.controls {
+    text-align: center;
+    margin: 20px 0;
+}
+
+button, .admin-btn, .edit-btn, .delete-btn, .cancel-btn {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover, .admin-btn:hover, .edit-btn:hover, .delete-btn:hover {
+    background: #ff5252;
+    transform: scale(1.05);
+}
+
+.admin-btn {
+    background: #4ecdc4;
+}
+
+.admin-btn:hover {
+    background: #3dbdb4;
+}
+
+.edit-btn {
+    background: #4caf50;
+}
+
+.edit-btn:hover {
+    background: #45a049;
+}
+
+.delete-btn {
+    background: #f44336;
+}
+
+.delete-btn:hover {
+    background: #da190b;
+}
+
+.cancel-btn {
+    background: #666;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0f3460;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+th {
+    background: #0a1a2e;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    color: #ffd93d;
+}
+
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #1e3a5f;
+}
+
+tr:hover {
+    background: #1a3a5f;
+}
+
+.retired {
+    color: #ff9f9f;
+}
+
+.active {
+    color: #9bff9b;
+}
+
+.score {
+    font-weight: bold;
+    color: #ffd93d;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #ffd93d;
+}
+
+.legend {
+    background: #0f3460;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.legend ul {
+    columns: 3;
+    list-style: none;
+    padding: 10px;
+}
+
+.legend li {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.admin-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tab-btn {
+    background: #1e3a5f;
+}
+
+.tab-btn.active {
+    background: #ff6b6b;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+/* Form Sections */
+.form-section {
+    background: #1a3a5f;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.form-section h3 {
+    color: #ffd93d;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    border-bottom: 2px solid #ffd93d;
+    padding-bottom: 8px;
+    display: inline-block;
+    text-align: left;
+}
+
+/* Form Fields */
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-size: 12px;
+    color: #ffd93d;
+    margin-bottom: 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.form-field input, 
+.form-field select {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: #0f3460;
+    color: white;
+    font-size: 14px;
+}
+
+.form-field input:focus, 
+.form-field select:focus {
+    outline: none;
+    border: 1px solid #ff6b6b;
+    background: #1a4a7a;
+}
+
+.form-field input::placeholder {
+    color: #88aadd;
+    font-size: 12px;
+}
+
+/* Inputs without form-field (fallback) */
+input, select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #1e3a5f;
+    color: white;
+}
+
+input::placeholder {
+    color: #88aadd;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border: 1px solid #ff6b6b;
+}
+
+/* Achievement Buttons */
+.achievement-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.achievement-buttons button {
+    background: #4ecdc4;
+    font-size: 12px;
+    padding: 8px 15px;
+}
+
+/* Form Actions */
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #4ecdc4;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background: #3dbdb4;
+    transform: scale(1.02);
+}
+
+/* Back Link */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #ffd93d;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Update Player Select */
+#update-player-select {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    display: block;
+    padding: 12px;
+    background: #1e3a5f;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Update Message */
+#update-message {
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+    
+    th, td {
+        padding: 6px;
+    }
+    
+    .legend ul {
+        columns: 2;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .form-section {
+        padding: 15px;
+    }
+    
+    .form-section h3 {
+        font-size: 1em;
+    }
+    
+    .achievement-buttons {
+        justify-content: center;
+    }
+    
+    .admin-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}

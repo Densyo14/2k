@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test API</title>
+</head>
+<body>
+    <h2>Test Add Player API</h2>
+    <button onclick="testAdd()">Test Add Michael Jordan</button>
+    <pre id="result"></pre>
+
+    <script>
+    function testAdd() {
+        const data = {
+            name: "Test Player",
+            position: "SG",
+            status: "Active",
+            rings: 0,
+            mvp: 0,
+            fmvp: 0,
+            all_nba: 0,
+            all_def: 0,
+            dpoy: 0,
+            roty: 0,
+            mip: 0,
+            sixth_man: 0,
+            ppg_lc: 0,
+            rpg_lc: 0,
+            apg_lc: 0,
+            spg_lc: 0,
+            bpg_lc: 0
+        };
+
+        fetch('/2k/api/create_player.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById('result').innerText = text;
+        })
+        .catch(error => {
+            document.getElementById('result').innerText = 'Error: ' + error;
+        });
+    }
+    </script>
+</body>
+</html>
