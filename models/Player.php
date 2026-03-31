@@ -48,9 +48,9 @@ class Player {
      * - MIP/6MOY: Nice but not elite (1 pt)
      */
     private function calculatePlayerScore($player) {
-        return ($player['rings'] * 8) +           // Rings - team accomplishment
+        return ($player['rings'] * 10) +           // Rings - team accomplishment
                ($player['mvp'] * 15) +             // MVP - Most prestigious
-               ($player['fmvp'] * 12) +            // FMVP - Best on championship team
+               ($player['fmvp'] * 13) +            // FMVP - Best on championship team
                ($player['dpoy'] * 6) +             // DPOY - Great but less than MVP
                ($player['all_nba'] * 6) +          // All-NBA - Top 15 player
                ($player['all_def'] * 3) +          // All-Defense - Elite defender
