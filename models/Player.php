@@ -52,16 +52,16 @@ class Player {
                ($player['mvp'] * 15) +             // MVP - Most prestigious
                ($player['fmvp'] * 12) +            // FMVP - Best on championship team
                ($player['dpoy'] * 6) +             // DPOY - Great but less than MVP
-               ($player['all_nba'] * 3) +          // All-NBA - Top 15 player
-               ($player['all_def'] * 2) +          // All-Defense - Elite defender
+               ($player['all_nba'] * 6) +          // All-NBA - Top 15 player
+               ($player['all_def'] * 3) +          // All-Defense - Elite defender
                ($player['roty'] * 3) +             // ROTY - Immediate stardom
                ($player['mip'] * 1) +              // MIP - Nice but not elite
                ($player['sixth_man'] * 1) +        // 6MOY - Valuable role player
-               ($player['ppg_lc'] * 4) +           // Scoring Title - Elite scorer
-               ($player['rpg_lc'] * 2) +           // Rebound Title - Big man elite
-               ($player['apg_lc'] * 2) +           // Assist Title - Playmaker elite
-               ($player['spg_lc'] * 2) +           // Steals Title - Defensive elite
-               ($player['bpg_lc'] * 2);            // Blocks Title - Rim protector
+               ($player['ppg_lc'] * 5) +           // Scoring Title - Elite scorer
+               ($player['rpg_lc'] * 3) +           // Rebound Title - Big man elite
+               ($player['apg_lc'] * 3) +           // Assist Title - Playmaker elite
+               ($player['spg_lc'] * 3) +           // Steals Title - Defensive elite
+               ($player['bpg_lc'] * 3);            // Blocks Title - Rim protector
     }
     
     /**
